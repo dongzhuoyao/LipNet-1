@@ -29,8 +29,15 @@ class BasicGenerator(keras.callbacks.Callback):
         self.cur_val_index   = multiprocessing.Value('i', 0)
         self.curriculum      = kwargs.get('curriculum', None)
         self.random_seed     = kwargs.get('random_seed', 13)
-        self.vtype               = kwargs.get('vtype', 'mouth')
-        self.face_predictor_path = kwargs.get('face_predictor_path', None)
+        #orignal
+        #self.vtype               = kwargs.get('vtype', 'mouth')
+        #self.face_predictor_path = kwargs.get('face_predictor_path', None)
+        #modified by dongzhuoyao
+        self.vtype = kwargs.get('vtype', 'face')
+        self.face_predictor_path = kwargs.get('face_predictor_path',
+                                              '/bdata/hut/lab/riz_LipNet/evaluation/models/weights268.h5')
+
+
         self.steps_per_epoch     = kwargs.get('steps_per_epoch', None)
         self.validation_steps    = kwargs.get('validation_steps', None)
         # Process epoch is used by non-training generator (e.g: validation)

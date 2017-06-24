@@ -6,7 +6,9 @@ extract_mouth_batch.py
 Usage:
     python extract_mouth_batch.py [source directory] [pattern] [target directory] [face predictor path]
 
-    pattern: *.avi, *.mpg, etc 
+    pattern: *.avi, *.mpg, etc
+
+    python scripts/extract_mouth_batch.py /bdata/hut/lab/riz_LipNet/data/unzipped \*.mpg /bdata/hut/lab/riz_LipNet/data/unzipped_mouth common/predictors/shape_predictor_68_face_landmarks.dat
 
 Example:
     python scripts/extract_mouth_batch.py evaluation/samples/GRID/ *.mpg TARGET/ common/predictors/shape_predictor_68_face_landmarks.dat

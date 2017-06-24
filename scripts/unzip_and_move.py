@@ -17,11 +17,11 @@ for k in range(1,35):
 
     cmd = ['unzip', video, '-d', target_dir]
     print('unzip ', video)
-    #subprocess.call(cmd)
+    subprocess.call(cmd)
 
     #mkdir -p 111 && tar -zxvf s1.tar -C 111
     #tar_target = os.path.join(target_dir, 's%d_align'.format(k))
     tar_target = target_dir
-    cmd = ['tar','-zxvf',align,'-C',tar_target ]
+    cmd = ['tar','-xvf',align,'-C',tar_target ]
     print('tar  ', align)
     subprocess.call(cmd)

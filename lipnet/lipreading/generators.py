@@ -96,8 +96,8 @@ class BasicGenerator(keras.callbacks.Callback):
                     video = Video(self.vtype, self.face_predictor_path).from_frames(video_path)
             except AttributeError as err:
                 raise err
-            except:
-                print "Error loading video: "+video_path
+            except Exception, e:
+                print "Error loading video: "+video_path + "  "+str(e)
                 continue
             if K.image_data_format() == 'channels_first' and video.data.shape != (self.img_c,self.frames_n,self.img_w,self.img_h):
                 print "Video "+video_path+" has incorrect shape "+str(video.data.shape)+", must be "+str((self.img_c,self.frames_n,self.img_w,self.img_h))+""

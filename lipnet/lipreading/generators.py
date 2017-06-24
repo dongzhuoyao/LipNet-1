@@ -35,7 +35,7 @@ class BasicGenerator(keras.callbacks.Callback):
         #modified by dongzhuoyao
         self.vtype = kwargs.get('vtype', 'face')
         self.face_predictor_path = kwargs.get('face_predictor_path',
-                                              '/bdata/hut/lab/riz_LipNet/evaluation/models/weights268.h5')
+                                              '/bdata/hut/lab/riz_LipNet/evaluation/models/weights368.h5')
 
 
         self.steps_per_epoch     = kwargs.get('steps_per_epoch', None)

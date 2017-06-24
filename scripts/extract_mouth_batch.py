@@ -42,6 +42,8 @@ def find_files(directory, pattern):
                 filename = os.path.join(root, basename)
                 yield filename
 
+print ('TARGET_PATH: {}'.format(TARGET_PATH))
+
 for filepath in find_files(SOURCE_PATH, SOURCE_EXTS):
     print "Processing: {}".format(filepath)
     video = Video(vtype='face', face_predictor_path=FACE_PREDICTOR_PATH).from_video(filepath)

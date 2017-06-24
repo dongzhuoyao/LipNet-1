@@ -12,8 +12,8 @@ for k in range(1,35):
     if k == 21:
         continue
 
-    video = video_str.replace("s{*}",k)
-    align = align_str.replace("s{*}",k)
+    video = video_str.replace("{*}",k)
+    align = align_str.replace("{*}",k)
 
     cmd = ['wget', video,'-P',target_dir]
     print('Downloading ', video)

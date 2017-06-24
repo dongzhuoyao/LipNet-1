@@ -4,8 +4,8 @@ import subprocess
 
 target_dir = '/bdata/hut/lab/riz_LipNet/data/unzipped'
 
-video_str = 's{*}.mpg_vcd.zip'
-align_str = 's{*}.tar'
+video_str = '/bdata/hut/lab/riz_LipNet/data/s{*}.mpg_vcd.zip'
+align_str = '/bdata/hut/lab/riz_LipNet/data/s{*}.tar'
 
 
 for k in range(1,35):

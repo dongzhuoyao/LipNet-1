@@ -4,7 +4,7 @@ extract_mouth_batch.py
     while preserving the overall structure of the source directory content.
 
 Usage:
-    python extract_mouth_batch.py [source directory] [pattern] [target directory] [face predictor path]
+    python extract_mouth_batch.py [source directory] [pattern] [target directory] [mouth predictor path]
 
     pattern: *.avi, *.mpg, etc
 
@@ -48,6 +48,7 @@ for filepath in find_files(SOURCE_PATH, SOURCE_EXTS):
 
     filepath_wo_ext = os.path.splitext(filepath)[0]
     target_dir = os.path.join(TARGET_PATH, filepath_wo_ext)
+    print "target_dir: {}".format(target_dir)
     mkdir_p(target_dir)
 
     i = 0

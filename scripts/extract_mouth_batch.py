@@ -8,7 +8,7 @@ Usage:
 
     pattern: *.avi, *.mpg, etc
 
-    python scripts/extract_mouth_batch.py /bdata/hut/lab/riz_LipNet/data/unzipped \*.mpg /bdata/hut/lab/riz_LipNet/data/unzipped_mouth common/predictors/shape_predictor_68_face_landmarks.dat
+    python scripts/extract_mouth_batch.py /bdata/hut/lab/riz_LipNet/data/unzipped \*.mpg unzipped_mouth/ common/predictors/shape_predictor_68_face_landmarks.dat
 
 Example:
     python scripts/extract_mouth_batch.py evaluation/samples/GRID/ *.mpg TARGET/ common/predictors/shape_predictor_68_face_landmarks.dat
@@ -49,6 +49,7 @@ for filepath in find_files(SOURCE_PATH, SOURCE_EXTS):
     video = Video(vtype='face', face_predictor_path=FACE_PREDICTOR_PATH).from_video(filepath)
 
     filepath_wo_ext = os.path.splitext(filepath)[0]
+    print('filepath_wo_ext: {}'.format(filepath_wo_ext))
     target_dir = os.path.join(TARGET_PATH, filepath_wo_ext)
     print "target_dir: {}".format(target_dir)
     mkdir_p(target_dir)
